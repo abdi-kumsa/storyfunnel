@@ -31,8 +31,7 @@ The codebase is built strictly on clean, independent separation of concerns for 
 ├── index.html        # Semantic HTML5 with 12 structured editorial sections
 ├── styles.css        # Standalone CSS3 design system with design tokens & keyframes
 ├── script.js         # Interactive 8-stage pipeline engine, auto-tour & modal controllers
-├── docs/             # Strategy guide, content briefs & design specifications
-├── .gitignore        # Git exclusion rules for temp files
+├── .gitignore        # Git exclusion rules (keeps private docs local)
 └── README.md         # Project documentation & deployment guide
 ```
 
