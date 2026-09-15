@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Story Funnel — Internal Content Capability & Enterprise Storytelling</title>
+  <meta name="description" content="Story Funnel helps organisations train their internal teams to turn their expertise into strategic content that attracts attention, builds trust and drives growth and sales."/>
+  
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Story Funnel — Internal Content Capability & Enterprise Storytelling"/>
+  <meta property="og:description" content="Turn your employees into knowledge & expert creators. We build repeatable internal content capabilities for enterprise organisations."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Story Funnel — Internal Content Capability"/>
+  <meta name="twitter:description" content="Turn your internal expertise into compelling stories that drive trust, leads and revenue."/>
+
+  <!-- Branded SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%230F172A'/><circle cx='50' cy='50' r='20' fill='%23E05D26'/></svg>"/>
+
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+
+
+  <!-- Tailwind CSS Engine -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "brand-dark": "#070B12",
+            "brand-navy": "#0B132B",
+            "brand-slate": "#0F172A",
+            "text-primary": "#0A1628",
+            "text-secondary": "#334155",
+            "text-muted": "#64748B",
+            "surface-canvas": "#FFFFFF",
+            "surface-subtle": "#F8FAFC",
+            "surface-warm": "#FAF9F6",
+            "surface-muted": "#F1F5F9",
+            "terracotta": {
+              DEFAULT: "#E05D26",
+              hover: "#F97316",
+              subtle: "#FFF6F2",
+              border: "#FCD9CD"
+            },
+            "ochre": {
+              DEFAULT: "#D97706",
+              subtle: "#FFFBEB",
+              border: "#FDE68A"
+            },
+            "azure": {
+              DEFAULT: "#0284C7",
+              subtle: "#F0F9FF",
+              border: "#BAE6FD"
+            },
+            "border-hairline": "#E2E8F0",
+            "border-strong": "#CBD5E1"
+          },
+          fontFamily: {
+            headline: ["Manrope", "Plus Jakarta Sans", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          },
+          boxShadow: {
+            "glow-amber": "0 0 35px -5px rgba(224, 93, 38, 0.3)",
+            "glow-azure": "0 0 35px -5px rgba(2, 132, 199, 0.3)",
+            "editorial": "0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.03)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Standalone External Stylesheet -->
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Standalone External JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-surface-canvas font-body text-text-primary antialiased selection:bg-terracotta selection:text-white">
+
+  <!-- Real-time Reading Scroll Progress Bar -->
+  <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+
+  <!-- =========================================================================
+       HEADER / NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-hairline transition-all duration-200">
+    <div class="h-20 max-w-[1280px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a class="flex items-center gap-2.5 font-headline font-extrabold text-xl tracking-[0.06em] text-brand-slate uppercase group" href="#">
+        <span class="tracking-tight group-hover:text-terracotta transition-colors">STORY FUNNEL</span>
+        <span class="w-2 h-2 rounded-full bg-terracotta inline-block shadow-glow-amber animate-pulse"></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
+        <a class="nav-link font-medium text-sm text-text-secondary hover:text-brand-slate transition-colors" href="#the-problem">The Problem</a>
+        <a class="nav-link font-medium text-sm text-text-secondary hover:text-brand-slate transition-colors" href="#the-funnel">The Funnel</a>
+        <a class="nav-link font-medium text-sm text-text-secondary hover:text-brand-slate transition-colors" href="#capabilities">Capabilities</a>
+        <a class="nav-link font-medium text-sm text-text-secondary hover:text-brand-slate transition-colors" href="#the-model">The Model</a>
+        <a class="nav-link font-medium text-sm text-text-secondary hover:text-brand-slate transition-colors" href="#system">Execution</a>
+        <a class="nav-link font-medium text-sm text-text-secondary hover:text-brand-slate transition-colors" href="#clients">Clients</a>
+        <a class="nav-link font-medium text-sm text-text-secondary hover:text-brand-slate transition-colors" href="#about">About</a>
+      </nav>
+
+      <!-- Desktop CTA & Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a class="btn-primary-luminous open-consultation-modal hidden sm:inline-flex items-center justify-center font-medium text-sm px-6 py-2.5 rounded-sm" href="#contact">
+          <span>Build Internal Capability</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle Button -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn lg:hidden flex flex-col justify-center items-center p-2 rounded border border-border-hairline" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="w-5 h-0.5 bg-brand-slate mb-1"></span>
+          <span class="w-5 h-0.5 bg-brand-slate mb-1"></span>
+          <span class="w-5 h-0.5 bg-brand-slate"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer lg:hidden">
+    <nav class="flex flex-col space-y-5 pt-4">
+      <a class="mobile-nav-link text-lg font-headline font-bold text-brand-slate pb-2 border-b border-border-hairline flex items-center justify-between" href="#the-problem">
+        <span>01 // The Problem</span>
+        <span class="text-terracotta text-sm">→</span>
+      </a>
+      <a class="mobile-nav-link text-lg font-headline font-bold text-brand-slate pb-2 border-b border-border-hairline flex items-center justify-between" href="#the-funnel">
+        <span>02 // The Story Funnel</span>
+        <span class="text-terracotta text-sm">→</span>
+      </a>
+      <a class="mobile-nav-link text-lg font-headline font-bold text-brand-slate pb-2 border-b border-border-hairline flex items-center justify-between" href="#capabilities">
+        <span>03 // Three Core Pillars</span>
+        <span class="text-terracotta text-sm">→</span>
+      </a>
+      <a class="mobile-nav-link text-lg font-headline font-bold text-brand-slate pb-2 border-b border-border-hairline flex items-center justify-between" href="#the-model">
+        <span>04 // The Internal Model</span>
+        <span class="text-terracotta text-sm">→</span>
+      </a>
+      <a class="mobile-nav-link text-lg font-headline font-bold text-brand-slate pb-2 border-b border-border-hairline flex items-center justify-between" href="#system">
+        <span>05 // Execution Framework</span>
+        <span class="text-terracotta text-sm">→</span>
+      </a>
+      <a class="mobile-nav-link text-lg font-headline font-bold text-brand-slate pb-2 border-b border-border-hairline flex items-center justify-between" href="#clients">
+        <span>06 // Client Profiles</span>
+        <span class="text-terracotta text-sm">→</span>
+      </a>
+      <a class="mobile-nav-link text-lg font-headline font-bold text-brand-slate pb-2 border-b border-border-hairline flex items-center justify-between" href="#about">
+        <span>07 // About Story Funnel</span>
+        <span class="text-terracotta text-sm">→</span>
+      </a>
+    </nav>
+    <div class="pt-6 pb-6">
+      <button class="btn-primary-luminous open-consultation-modal w-full py-4 text-center justify-center font-bold">
+        Book a Capability Consultation
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN CONTENT
+       ========================================================================= -->
+  <main class="w-full pt-20 bg-surface-canvas min-h-screen">
+    
+    <!-- -----------------------------------------------------------------------
+         1. HERO SECTION (Immersive Editorial Bento with Motion)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-mesh-radial relative overflow-hidden" id="hero">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 pt-16 pb-20 lg:pt-24 lg:pb-28 relative z-10">
+        
+        <div class="max-w-4xl flex flex-col items-start space-y-8 motion-reveal">
+          
+          <!-- Eyebrow Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 bg-terracotta-subtle border border-terracotta-border rounded-full shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-terracotta animate-ping"></span>
+            <span class="font-body text-xs uppercase tracking-wider text-terracotta font-bold">STORY FUNNEL · STORYFUNNEL.COM</span>
+          </div>
+
+          <!-- Main Headlines -->
+          <div class="space-y-4">
+            <h1 class="font-headline font-extrabold text-4xl sm:text-6xl lg:text-[4rem] leading-[1.08] tracking-tight text-brand-slate">
+              Storytelling is the first stage of <span class="text-gradient-amber">today's funnel.</span>
+            </h1>
+            <p class="font-headline font-bold text-2xl sm:text-3xl text-terracotta">
+              We build your internal content capability.
+            </p>
+          </div>
+
+          <!-- Value Proposition Prose -->
+          <div class="space-y-5 text-lg sm:text-xl text-text-secondary leading-relaxed font-normal">
+            <p>
+              Story Funnel helps organisations and brands turn the people who know their business best—their employees—into effective content storytellers, what we call <strong class="text-brand-slate font-semibold">knowledge & expert creators</strong>.
+            </p>
+            <p class="text-base sm:text-lg text-text-muted">
+              Many organisations have the expertise, knowledge and stories already inside the business. What is often missing is the strategy, storytelling skills and social-media understanding to turn that knowledge into content that attracts attention, builds trust and drives action.
+            </p>
+            <div class="p-6 bg-surface-warm border-l-4 border-terracotta rounded-r-sm shadow-sm">
+              <p class="font-headline font-bold text-lg sm:text-xl text-brand-slate">
+                "Your employees already understand your business. We teach them how to communicate it."
+              </p>
+            </div>
+          </div>
+
+          <!-- Action CTAs & Consultation Entry -->
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
+            <button class="btn-primary-luminous open-consultation-modal text-base sm:text-lg px-8 py-4 shadow-lg">
+              <span>Build Your Content Capability</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a class="btn-secondary-ghost text-base sm:text-lg px-8 py-4" href="#about">
+              <span>Talk to Story Funnel</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Live Editorial Trust & Metrics Ribbon -->
+          <div class="w-full pt-8 mt-4 border-t border-border-hairline grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div class="space-y-1">
+              <span class="font-headline font-extrabold text-2xl sm:text-3xl text-brand-slate block" data-counter="100" data-suffix="%">100%</span>
+              <span class="text-xs text-text-muted font-medium">In-House Retained IP</span>
+            </div>
+            <div class="space-y-1">
+              <span class="font-headline font-extrabold text-2xl sm:text-3xl text-terracotta block" data-counter="340" data-prefix="+" data-suffix="%">+340%</span>
+              <span class="text-xs text-text-muted font-medium">Organic Trust Velocity</span>
+            </div>
+            <div class="space-y-1">
+              <span class="font-headline font-extrabold text-2xl sm:text-3xl text-brand-slate block">Zero</span>
+              <span class="text-xs text-text-muted font-medium">Agency Hand-offs</span>
+            </div>
+            <div class="space-y-1">
+              <span class="font-headline font-extrabold text-2xl sm:text-3xl text-emerald-600 block">Repeatable</span>
+              <span class="text-xs text-text-muted font-medium">Internal System</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         2. THE PROBLEM WE SOLVE (Broken Loop vs. Opportunity Bento)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas" id="the-problem">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        
+        <div class="flex items-center gap-3 mb-6 motion-reveal">
+          <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider px-2.5 py-1 bg-terracotta-subtle border border-terracotta-border rounded">02 // THE PROBLEM WE SOLVE</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-14 motion-reveal">
+          <div class="lg:col-span-6">
+            <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.65rem] tracking-tight text-brand-slate leading-tight">
+              Your organisation already has the stories.
+            </h2>
+          </div>
+          <div class="lg:col-span-6 flex flex-col justify-center">
+            <p class="font-body text-lg text-text-secondary leading-relaxed">
+              The challenge isn't always finding something to say. It's knowing: <strong class="text-brand-slate">What</strong> should we say? <strong class="text-brand-slate">How</strong> should we say it? <strong class="text-brand-slate">Who</strong> should say it? <strong class="text-brand-slate">Where</strong> should we say it? And how does it lead directly to business?
+            </p>
+          </div>
+        </div>
+
+        <!-- Problem Bento Container -->
+        <div class="spotlight-wrapper border border-border-strong p-8 lg:p-12 space-y-8 bg-surface-warm rounded-sm shadow-editorial motion-reveal">
+          <div class="space-y-3">
+            <span class="text-xs uppercase tracking-wider font-bold text-text-muted block">The Common Trap</span>
+            <p class="font-headline text-lg sm:text-xl text-brand-slate font-semibold">
+              Many organisations invest in social media managers, content creators, agencies, paid advertising and beautiful photography and video. Yet their social pages can still become a sterile stream of:
+            </p>
+          </div>
+
+          <!-- The Low-Trust Conveyor Belt -->
+          <div class="p-5 border-l-4 border-l-rose-500 border-y border-r border-rose-200 bg-rose-50/60 font-headline text-sm sm:text-base text-brand-slate tracking-wide shadow-sm font-semibold rounded-r animate-beam">
+            <span class="text-rose-600 font-bold mr-2">⚠️ The Generic Loop:</span>
+            Products → Promotions → Events → Photos → “Contact us” → Buy now
+          </div>
+
+          <!-- Dynamic Split: The Result vs The Opportunity -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-border-hairline">
+            
+            <div class="bg-white p-7 border border-rose-200 rounded-sm space-y-3 hover:shadow-md transition-shadow">
+              <span class="text-xs uppercase text-rose-600 font-bold tracking-wider flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                The Broken Result
+              </span>
+              <p class="text-text-secondary text-sm sm:text-base leading-relaxed">
+                They may gain passive follower counts, but generate little meaningful conversation, zero authentic trust, and zero real movement toward purchase decisions.
+              </p>
+            </div>
+
+            <div class="bg-terracotta-subtle p-7 border border-terracotta-border rounded-sm space-y-3 hover:shadow-md transition-shadow">
+              <span class="text-xs uppercase text-terracotta font-bold tracking-wider flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                The Story Funnel Opportunity
+              </span>
+              <p class="text-brand-slate text-sm sm:text-base font-medium leading-relaxed">
+                The strategic knowledge that could make your brand magnetic is already sitting inside your organisation. <strong>Story Funnel unlocks it and trains your team to monetize it.</strong>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         3. OUR BELIEF & THE STORY FUNNEL INTERACTIVE PIPELINE + AUTO-TOUR
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas" id="the-funnel">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        
+        <div class="space-y-4 mb-12 motion-reveal">
+          <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider px-2.5 py-1 bg-terracotta-subtle border border-terracotta-border rounded">03 // OUR BELIEF</span>
+          <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.65rem] tracking-tight text-brand-slate">
+            The people closest to the business often have the best stories.
+          </h2>
+        </div>
+        
+        <!-- 8 Knowledge Pillars Bento Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 border-t border-l border-border-hairline mb-8 bg-white shadow-sm motion-reveal">
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">01.</span> Your mission
+          </div>
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">02.</span> Your vision
+          </div>
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">03.</span> Products & services
+          </div>
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">04.</span> Your customers
+          </div>
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">05.</span> Your operations
+          </div>
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">06.</span> Your culture
+          </div>
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">07.</span> Your industry
+          </div>
+          <div class="p-6 border-r border-b border-border-hairline font-headline font-semibold text-base sm:text-lg text-brand-slate hover:bg-surface-subtle transition-all duration-200 flex items-center gap-2">
+            <span class="text-terracotta font-bold">08.</span> Your business goals
+          </div>
+        </div>
+
+        <p class="font-headline font-bold text-lg sm:text-xl text-brand-slate mb-16 motion-reveal">
+          We teach your internal teams how to turn that tacit knowledge into strategic, compounding content.
+        </p>
+
+        <!-- SUB-SECTION: THE STORY FUNNEL INTERACTIVE ENGINE -->
+        <div class="border-t border-border-hairline pt-16 motion-reveal">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider block mb-2">Interactive Framework</span>
+              <h3 class="font-headline font-extrabold text-2xl sm:text-3xl text-brand-slate">
+                The Story Funnel Pipeline
+              </h3>
+            </div>
+            
+            <!-- Controls: Auto-Tour Button & Instructions -->
+            <div class="flex items-center gap-3">
+              <button id="funnel-auto-tour-btn" class="px-4 py-1.5 text-xs font-headline font-bold border border-terracotta rounded-full text-terracotta hover:bg-terracotta hover:text-white transition-all flex items-center gap-1.5 shadow-sm">
+                <span>▶ Start Auto Tour</span>
+              </button>
+              <div class="hidden sm:inline-flex items-center gap-2 text-xs text-text-muted bg-surface-subtle px-3 py-1.5 border border-border-hairline rounded-full">
+                <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+                <span>Click any stage below</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Horizontal Progression Bar with Interactive Stage Triggers -->
+          <div class="funnel-pipeline-container overflow-hidden rounded-sm border border-border-strong mb-6">
+            <!-- Dynamic Timer Progress Bar -->
+            <div id="funnel-timer-bar" class="funnel-timer-bar"></div>
+            
+            <div class="grid grid-cols-8 min-w-[820px] divide-x divide-border-hairline text-center" id="story-funnel-pipeline">
+              
+              <div class="funnel-stage-interactive stage-active" data-stage="01">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">01</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Expertise</div>
+              </div>
+
+              <div class="funnel-stage-interactive" data-stage="02">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">02</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Story</div>
+              </div>
+
+              <div class="funnel-stage-interactive" data-stage="03">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">03</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Content</div>
+              </div>
+
+              <div class="funnel-stage-interactive" data-stage="04">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">04</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Attention</div>
+              </div>
+
+              <div class="funnel-stage-interactive" data-stage="05">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">05</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Engagement</div>
+              </div>
+
+              <div class="funnel-stage-interactive" data-stage="06">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">06</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Trust</div>
+              </div>
+
+              <div class="funnel-stage-interactive" data-stage="07">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">07</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Action</div>
+              </div>
+
+              <div class="funnel-stage-interactive" data-stage="08">
+                <span class="stage-index text-xs font-mono font-bold block mb-1">08</span>
+                <div class="stage-name font-headline font-bold text-sm sm:text-base">Sale</div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Dynamic Stage Inspector Box with Smooth Transition -->
+          <div class="bento-card spotlight-wrapper bg-surface-subtle border border-border-strong p-6 sm:p-8 space-y-6 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-border-hairline pb-4 gap-2">
+              <div class="flex items-center gap-3">
+                <span id="funnel-active-title" class="font-headline font-extrabold text-xl text-brand-slate transition-all duration-200">01 / Internal Expertise</span>
+                <span id="funnel-active-role" class="text-xs uppercase px-2.5 py-0.5 bg-terracotta-subtle border border-terracotta-border text-terracotta font-bold rounded">The Foundation</span>
+              </div>
+              <span id="funnel-active-metric" class="text-xs font-mono font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 border border-emerald-200 rounded">100% Owned IP (Zero Agency Dependency)</span>
+            </div>
+
+            <p id="funnel-active-quote" class="font-headline font-medium text-lg sm:text-xl text-brand-slate italic">
+              "The people closest to the business have the deepest, most authentic stories."
+            </p>
+
+            <p id="funnel-active-desc" class="text-text-secondary text-base leading-relaxed">
+              We audit and map latent operational, technical, and executive wisdom that already exists inside your organisation.
+            </p>
+
+            <div class="pt-3 flex items-center gap-2 text-xs font-semibold text-brand-slate">
+              <span class="text-text-muted">Key Deliverable:</span>
+              <span id="funnel-active-deliverable" class="text-terracotta">Knowledge Discovery Map & Subject-Matter Expert Directory</span>
+            </div>
+          </div>
+
+          <!-- Principle Highlight Quote -->
+          <div class="mt-8 p-6 border-l-4 border-terracotta bg-terracotta-subtle rounded-r-sm shadow-sm">
+            <p class="font-headline font-bold text-lg sm:text-xl text-brand-slate italic">
+              "Storytelling is not decoration. It is the beginning of the customer journey."
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         4. THREE CORE PILLARS (Elevated Bento Trio with Hover Spotlight)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas" id="capabilities">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        
+        <div class="space-y-4 mb-16 motion-reveal">
+          <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider px-2.5 py-1 bg-terracotta-subtle border border-terracotta-border rounded">04 // THREE CORE PILLARS</span>
+          <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.65rem] tracking-tight text-brand-slate">
+            Three capabilities. One system.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 motion-reveal">
+          
+          <!-- PILLAR 1: STORYTELLING -->
+          <div class="bento-card spotlight-wrapper border-t-4 border-t-brand-slate flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-brand-slate uppercase tracking-wider">Pillar 01</span>
+                <span class="w-8 h-8 rounded-full bg-brand-slate/5 flex items-center justify-center text-brand-slate font-bold text-xs">📖</span>
+              </div>
+              <h3 class="font-headline font-extrabold text-2xl text-brand-slate">
+                STORYTELLING
+              </h3>
+              <p class="font-headline font-bold text-base text-brand-slate">
+                Turn internal expertise into compelling stories.
+              </p>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                We identify the knowledge, people, experiences and ideas inside your organisation that can become powerful content. We teach teams story development, story structures, hooks, editorial thinking, brand storytelling, expert-led content, video storytelling and human-centred storytelling.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-border-hairline space-y-2 text-xs text-text-muted">
+              <div class="font-semibold text-brand-slate">Core Competencies:</div>
+              <p>Hook Architecture · Narrative Arcs · Video Presence · Editorial Standards</p>
+            </div>
+          </div>
+
+          <!-- PILLAR 2: SOCIAL MEDIA -->
+          <div class="bento-card spotlight-wrapper border-t-4 border-t-terracotta bg-surface-warm flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-terracotta uppercase tracking-wider">Pillar 02</span>
+                <span class="w-8 h-8 rounded-full bg-terracotta/10 flex items-center justify-center text-terracotta font-bold text-xs">📱</span>
+              </div>
+              <h3 class="font-headline font-extrabold text-2xl text-brand-slate">
+                SOCIAL MEDIA
+              </h3>
+              <p class="font-headline font-bold text-base text-terracotta">
+                Train teams to understand platforms, audiences, formats, analytics, and behaviour.
+              </p>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                We help your team understand how people consume content today. Training covers platform behaviour, audience psychology, content formats, short-form video, social hooks, retention, engagement, content planning, analytics, lead generation, funnel, CTA, personal/team visibility and platform-specific storytelling.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-border-hairline space-y-2 text-xs text-text-muted">
+              <div class="font-semibold text-brand-slate">Core Competencies:</div>
+              <p>Short-form Video · Algorithm Psychology · Audience Retention · Personal Branding</p>
+            </div>
+          </div>
+
+          <!-- PILLAR 3: GROWTH & SALES -->
+          <div class="bento-card spotlight-wrapper border-t-4 border-t-ochre flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-ochre uppercase tracking-wider">Pillar 03</span>
+                <span class="w-8 h-8 rounded-full bg-ochre/10 flex items-center justify-center text-ochre font-bold text-xs">📈</span>
+              </div>
+              <h3 class="font-headline font-extrabold text-2xl text-brand-slate">
+                GROWTH & SALES
+              </h3>
+              <p class="font-headline font-bold text-base text-ochre">
+                Connect content to engagement, leads, conversion and revenue.
+              </p>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                Content should not simply generate views. We help organisations connect their content to the business through calls to action, customer journeys, lead generation, conversion, sales content, content funnels, audience nurturing, measurement and optimisation.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-border-hairline space-y-2 text-xs text-text-muted">
+              <div class="font-semibold text-brand-slate">Core Competencies:</div>
+              <p>Conversion CTAs · Inbound Pipeline · Audience Nurturing · Closed Deal Attribution</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         5. THE MODEL COMPARISON (Traditional Agency vs. Story Funnel Model)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas" id="the-model">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 motion-reveal">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider px-2.5 py-1 bg-terracotta-subtle border border-terracotta-border rounded">05 // THE MODEL COMPARISON</span>
+            <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.65rem] tracking-tight text-brand-slate">
+              Build the capability. Keep the knowledge inside.
+            </h2>
+          </div>
+          <div class="lg:col-span-6 flex flex-col justify-center">
+            <p class="font-body text-lg text-text-secondary leading-relaxed">
+              We don't take your content away from your team. We make your team better at creating it. Story Funnel works with organisations to build a self-sustaining internal content capability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Comparative Split Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 motion-reveal">
+          
+          <!-- Box A: Traditional Agency Model -->
+          <div class="comparison-card-traditional spotlight-wrapper p-8 lg:p-12 space-y-6 rounded-sm">
+            <div class="flex items-center justify-between border-b border-rose-200 pb-4">
+              <span class="text-xs uppercase font-mono font-bold text-rose-600 tracking-wider">Conventional Agency Flow</span>
+              <span class="text-xs text-rose-600 font-semibold">High Friction</span>
+            </div>
+            <h3 class="font-headline font-extrabold text-2xl text-brand-slate">
+              Traditional model
+            </h3>
+            <div class="p-4 border border-rose-200 bg-white font-mono text-sm text-text-secondary rounded leading-relaxed">
+              Organisation → External agency → Content → Audience
+            </div>
+            <p class="text-text-secondary text-base leading-relaxed">
+              The external agency has to spend months trying to learn the nuances of your business, resulting in generic copy, endless approval cycles, and zero internal capability retained.
+            </p>
+          </div>
+
+          <!-- Box B: Story Funnel Model -->
+          <div class="comparison-card-storyfunnel spotlight-wrapper p-8 lg:p-12 space-y-6 rounded-sm">
+            <div class="flex items-center justify-between border-b border-terracotta-border pb-4">
+              <span class="text-xs uppercase font-mono font-bold text-terracotta tracking-wider">Story Funnel Methodology</span>
+              <span class="text-xs text-emerald-700 font-bold">Compounding Asset</span>
+            </div>
+            <h3 class="font-headline font-extrabold text-2xl text-brand-slate">
+              Story Funnel model
+            </h3>
+            <div class="p-4 border-l-4 border-l-terracotta border-y border-r border-terracotta-border bg-terracotta-subtle font-mono text-sm text-brand-slate font-bold rounded-r leading-relaxed">
+              Organisation → Internal expertise → Story Funnel training & strategy → Better content → Audience → Growth
+            </div>
+            <p class="text-brand-slate text-base font-medium leading-relaxed">
+              <strong>The expertise already exists inside your organisation.</strong> We build the capability to communicate it directly, authentically, and commercially.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         6. EXECUTION SYSTEM (What We Help Your Team Do)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas" id="system">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        
+        <div class="space-y-4 mb-12 motion-reveal">
+          <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider px-2.5 py-1 bg-terracotta-subtle border border-terracotta-border rounded">06 // EXECUTION SYSTEM</span>
+          <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.65rem] tracking-tight text-brand-slate">
+            What we help your team do
+          </h2>
+        </div>
+
+        <!-- Horizontal Process Bar -->
+        <div class="border border-border-strong bg-surface-warm p-5 mb-14 overflow-x-auto rounded-sm shadow-sm motion-reveal">
+          <div class="flex items-center justify-between min-w-[760px] font-headline font-bold text-sm sm:text-base">
+            <span class="text-brand-slate">Strategy</span>
+            <span class="text-terracotta">→</span>
+            <span class="text-brand-slate">Training</span>
+            <span class="text-terracotta">→</span>
+            <span class="text-brand-slate">Story Development</span>
+            <span class="text-terracotta">→</span>
+            <span class="text-brand-slate">Content Systems</span>
+            <span class="text-terracotta">→</span>
+            <span class="text-brand-slate">Editorial Direction</span>
+            <span class="text-terracotta">→</span>
+            <span class="text-terracotta font-extrabold">Growth & Sales</span>
+          </div>
+        </div>
+
+        <!-- 7 Core Capabilities List with Hover Transition -->
+        <div class="border-t border-border-strong divide-y divide-border-hairline motion-reveal">
+          
+          <div class="capability-item-card grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <div class="md:col-span-1 font-mono font-bold text-terracotta text-sm">01</div>
+            <div class="md:col-span-4 font-headline font-bold text-lg text-brand-slate capability-icon transition-transform">CONTENT STRATEGY</div>
+            <div class="md:col-span-7 text-text-secondary text-sm sm:text-base">
+              Develop a clear, high-conviction content direction tightly aligned with the organisation's commercial goals.
+            </div>
+          </div>
+
+          <div class="capability-item-card grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <div class="md:col-span-1 font-mono font-bold text-terracotta text-sm">02</div>
+            <div class="md:col-span-4 font-headline font-bold text-lg text-brand-slate capability-icon transition-transform">TEAM TRAINING</div>
+            <div class="md:col-span-7 text-text-secondary text-sm sm:text-base">
+              Train selected employees to become confident, authoritative on-camera content creators and storytellers.
+            </div>
+          </div>
+
+          <div class="capability-item-card grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <div class="md:col-span-1 font-mono font-bold text-terracotta text-sm">03</div>
+            <div class="md:col-span-4 font-headline font-bold text-lg text-brand-slate capability-icon transition-transform">EDITORIAL SYSTEMS</div>
+            <div class="md:col-span-7 text-text-secondary text-sm sm:text-base">
+              Create repeatable content pillars, formats, workflows, and strict editorial brand guidelines.
+            </div>
+          </div>
+
+          <div class="capability-item-card grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <div class="md:col-span-1 font-mono font-bold text-terracotta text-sm">04</div>
+            <div class="md:col-span-4 font-headline font-bold text-lg text-brand-slate capability-icon transition-transform">STORY DEVELOPMENT</div>
+            <div class="md:col-span-7 text-text-secondary text-sm sm:text-base">
+              Extract real operational stories within the organisation and transform them into high-performing content ideas.
+            </div>
+          </div>
+
+          <div class="capability-item-card grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <div class="md:col-span-1 font-mono font-bold text-terracotta text-sm">05</div>
+            <div class="md:col-span-4 font-headline font-bold text-lg text-brand-slate capability-icon transition-transform">SOCIAL MEDIA STRATEGY</div>
+            <div class="md:col-span-7 text-text-secondary text-sm sm:text-base">
+              Help teams master how to communicate effectively across short-form video and today's dominant platforms.
+            </div>
+          </div>
+
+          <div class="capability-item-card grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <div class="md:col-span-1 font-mono font-bold text-terracotta text-sm">06</div>
+            <div class="md:col-span-4 font-headline font-bold text-lg text-brand-slate capability-icon transition-transform">GROWTH & CONVERSION</div>
+            <div class="md:col-span-7 text-text-secondary text-sm sm:text-base">
+              Connect published content directly to audience growth, high-value leads, customer inquiries, and closed sales.
+            </div>
+          </div>
+
+          <div class="capability-item-card grid grid-cols-1 md:grid-cols-12 items-center gap-4">
+            <div class="md:col-span-1 font-mono font-bold text-terracotta text-sm">07</div>
+            <div class="md:col-span-4 font-headline font-bold text-lg text-brand-slate capability-icon transition-transform">ONGOING ADVISORY</div>
+            <div class="md:col-span-7 text-text-secondary text-sm sm:text-base">
+              Provide continuous editorial direction, quarterly content audits, and strategic coaching as internal teams scale.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         7. WHO WE WORK WITH (Filterable 12-Sector Matrix)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas" id="clients">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        
+        <div class="max-w-3xl space-y-4 mb-12 motion-reveal">
+          <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider px-2.5 py-1 bg-terracotta-subtle border border-terracotta-border rounded">07 // CLIENT PROFILES</span>
+          <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.65rem] tracking-tight text-brand-slate">
+            Who we work with
+          </h2>
+          <p class="font-body text-lg text-text-secondary">
+            Story Funnel is designed for organisations that already have knowledgeable people and internal teams but want to drastically elevate how they communicate online.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center gap-2.5 mb-10 text-xs font-semibold motion-reveal">
+          <button class="client-filter-btn px-4 py-2 rounded-full border border-border-strong bg-[#0F172A] text-white shadow-sm transition-all" data-filter="all">All 12 Sectors</button>
+          <button class="client-filter-btn px-4 py-2 rounded-full border border-border-strong bg-white text-text-secondary hover:border-brand-slate transition-all" data-filter="enterprise">Enterprise & Corporates</button>
+          <button class="client-filter-btn px-4 py-2 rounded-full border border-border-strong bg-white text-text-secondary hover:border-brand-slate transition-all" data-filter="professional">High-Trust Services</button>
+          <button class="client-filter-btn px-4 py-2 rounded-full border border-border-strong bg-white text-text-secondary hover:border-brand-slate transition-all" data-filter="consumer">Consumer & Institutions</button>
+        </div>
+
+        <!-- 12 Sectors Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 motion-reveal" id="clients-grid">
+          
+          <div class="client-sector-item sector-chip justify-between" data-category="enterprise">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">01</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Corporates</div>
+            </div>
+            <span class="text-xs text-text-muted">Enterprise</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="enterprise">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">02</span>
+              <div class="font-headline font-bold text-base text-brand-slate">SMEs & Growth Co.</div>
+            </div>
+            <span class="text-xs text-text-muted">Mid-Market</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="professional">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">03</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Real Estate</div>
+            </div>
+            <span class="text-xs text-text-muted">High-Value</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="consumer">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">04</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Hospitality Brands</div>
+            </div>
+            <span class="text-xs text-text-muted">Experience</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="professional">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">05</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Financial Institutions</div>
+            </div>
+            <span class="text-xs text-text-muted">High-Trust</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="professional">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">06</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Health & Wellness</div>
+            </div>
+            <span class="text-xs text-text-muted">Clinical / Care</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="professional">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">07</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Professional Services</div>
+            </div>
+            <span class="text-xs text-text-muted">Advisory / Law</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="consumer">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">08</span>
+              <div class="font-headline font-bold text-base text-brand-slate">NGOs & Foundations</div>
+            </div>
+            <span class="text-xs text-text-muted">Mission</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="consumer">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">09</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Educational Institutions</div>
+            </div>
+            <span class="text-xs text-text-muted">Academia</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="enterprise">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">10</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Technology Companies</div>
+            </div>
+            <span class="text-xs text-text-muted">B2B SaaS</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="consumer">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">11</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Consumer Brands</div>
+            </div>
+            <span class="text-xs text-text-muted">DTC / Retail</span>
+          </div>
+
+          <div class="client-sector-item sector-chip justify-between" data-category="consumer">
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-terracotta font-bold">12</span>
+              <div class="font-headline font-bold text-base text-brand-slate">Membership Orgs</div>
+            </div>
+            <span class="text-xs text-text-muted">Community</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         8. KEY WEBSITE MESSAGE (Midnight Obsidian Core Truth Anchor)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        
+        <div class="bento-card-dark spotlight-wrapper p-8 md:p-16 lg:p-20 relative overflow-hidden rounded-sm shadow-2xl motion-reveal">
+          <div class="max-w-3xl space-y-6 relative z-10">
+            
+            <div class="inline-flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-terracotta animate-ping"></span>
+              <span class="font-mono text-xs uppercase text-terracotta-border tracking-wider font-bold">08 // CORE TRUTH</span>
+            </div>
+
+            <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white leading-tight">
+              Your best content may already be inside your organisation.
+            </h2>
+
+            <div class="space-y-4 pt-2">
+              <p class="font-body text-lg text-slate-300 leading-relaxed">
+                Your employees know the business. They know the products. They know the customers. They know the problems you solve every day. They know the stories.
+              </p>
+              <div class="p-4 border-l-2 border-terracotta bg-white/5 rounded-r">
+                <p class="font-headline font-bold text-lg sm:text-xl text-terracotta-border leading-relaxed">
+                  We teach them how to turn that knowledge into content that people want to watch, read, share and act on.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         9. ABOUT STORY FUNNEL & LEADERSHIP DIFFERENTIATOR
+         ----------------------------------------------------------------------- -->
+    <section class="w-full border-b border-border-hairline bg-surface-canvas" id="about">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Editorial Portrait Media Card -->
+          <div class="lg:col-span-5 space-y-3 motion-reveal">
+            <div class="bento-card spotlight-wrapper p-2.5 shadow-editorial border-border-strong relative animate-float">
+              <img alt="Editorial portrait of creative leadership and production authority" class="w-full h-[500px] object-cover rounded-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1VxAHxdP_QVd5KgGcZnBRh3wKZYoRbhBPBx2HM_i8V75uTgG4Lt51MGjaPhvq6FCZsQerP-PparZyA_8_GiVLeMug4JvEZRPch3CZ8DVjAp8wXEWSwE1J4BI2sj_Q3RV6qseCloo8ITkDwYi0EQQjARlssU0DgSZTuA8NcoLK-DlzBJ_vIH7juoBnymmM74u2T3pKBEiDpBWzoxbZBzm-hYgUIktLR9oFlSn3EH1xqBQY4G1SefdOu-pg"/>
+            </div>
+            <div class="text-xs text-text-muted text-center font-mono">
+              Story Funnel Leadership — Production & Editorial Heritage
+            </div>
+          </div>
+
+          <!-- Editorial Narrative -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-6 motion-reveal">
+            <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider px-2.5 py-1 bg-terracotta-subtle border border-terracotta-border rounded w-fit">09 // FOUNDATION & LEADERSHIP</span>
+            
+            <h2 class="font-headline font-extrabold text-3xl sm:text-4xl lg:text-[2.65rem] tracking-tight text-brand-slate">
+              About Story Funnel
+            </h2>
+
+            <p class="font-body text-lg text-text-secondary leading-relaxed">
+              Story Funnel was founded on the intersection of <strong class="text-brand-slate">Storytelling + Editorial Strategy + Social Media + Commercial Growth</strong>. 
+            </p>
+
+            <p class="font-body text-base text-text-muted leading-relaxed">
+              With a deep background in professional media production and narrative craft as our core differentiator, we don't treat content as generic advertising. We train modern organisations to transform latent internal expertise into authoritative, repeatable internal media capabilities.
+            </p>
+
+            <div class="p-6 border-l-4 border-terracotta bg-surface-warm rounded-r-sm space-y-2 shadow-sm">
+              <p class="font-headline font-bold text-lg text-brand-slate italic">
+                "Storytelling is not decoration. It is the beginning of the customer journey."
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         10. FINAL CALL TO ACTION (Consultation Engine)
+         ----------------------------------------------------------------------- -->
+    <section class="w-full bg-surface-warm border-b border-border-hairline" id="contact">
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-24 lg:py-32">
+        <div class="bento-card spotlight-wrapper bg-white border border-border-strong p-8 md:p-16 lg:p-20 shadow-editorial rounded-sm motion-reveal">
+          <div class="max-w-3xl space-y-8">
+            
+            <div class="inline-flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-terracotta"></span>
+              <span class="font-body text-xs uppercase text-terracotta font-bold tracking-wider">GET STARTED</span>
+            </div>
+
+            <h2 class="font-headline font-extrabold text-3xl sm:text-5xl text-brand-slate tracking-tight leading-tight">
+              Let's build your internal content capability.
+            </h2>
+
+            <p class="font-body text-lg text-text-secondary leading-relaxed">
+              Story Funnel helps organisations train their internal teams to turn their expertise into strategic content that attracts attention, builds trust and drives growth and sales.
+            </p>
+
+            <!-- Action Button & Email Link -->
+            <div class="flex flex-wrap items-center gap-5 pt-2">
+              <button class="btn-primary-luminous open-consultation-modal text-base px-8 py-4">
+                <span>Book a Content Capability Consultation</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+              
+              <a class="btn-secondary-ghost text-base px-6 py-4" href="mailto:advisory@storyfunnel.com">
+                <span>Direct Desk: advisory@storyfunnel.com</span>
+                <span>→</span>
+              </a>
+            </div>
+
+            <!-- Response Guarantee Badge -->
+            <div class="pt-8 border-t border-border-hairline flex items-center gap-3 text-xs font-semibold text-text-muted">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Advisory Response Guaranteed within 24 Hours</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       CONSULTATION MODAL DIALOG
+       ========================================================================= -->
+  <div id="consultation-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content-box p-8 sm:p-10 space-y-6">
+      
+      <div class="flex items-center justify-between border-b border-border-hairline pb-4">
+        <div>
+          <span class="text-xs uppercase font-mono font-bold text-terracotta">Story Funnel Advisory</span>
+          <h3 id="modal-title" class="font-headline font-extrabold text-xl text-brand-slate">Schedule Capability Consultation</h3>
+        </div>
+        <button class="close-consultation-modal text-text-muted hover:text-brand-slate p-2 transition-transform hover:scale-110" aria-label="Close dialog">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="consultation-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase text-brand-slate mb-1">Your Full Name *</label>
+          <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-2.5 text-sm border border-border-strong rounded focus:border-brand-slate focus:ring-1 focus:ring-brand-slate outline-none"/>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-brand-slate mb-1">Work Email Address *</label>
+          <input type="email" required placeholder="sarah@company.com" class="w-full px-4 py-2.5 text-sm border border-border-strong rounded focus:border-brand-slate focus:ring-1 focus:ring-brand-slate outline-none"/>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-brand-slate mb-1">Organisation Sector *</label>
+          <select required class="w-full px-4 py-2.5 text-sm border border-border-strong rounded focus:border-brand-slate focus:ring-1 focus:ring-brand-slate outline-none bg-white">
+            <option value="">Select your sector</option>
+            <option value="corporates">Corporates</option>
+            <option value="smes">SMEs</option>
+            <option value="real-estate">Real estate companies</option>
+            <option value="hospitality">Hospitality brands</option>
+            <option value="financial">Financial institutions</option>
+            <option value="health">Health & wellness organisations</option>
+            <option value="professional">Professional services</option>
+            <option value="ngos">NGOs</option>
+            <option value="educational">Educational institutions</option>
+            <option value="tech">Technology companies</option>
+            <option value="consumer">Consumer brands</option>
+            <option value="membership">Membership organisations</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-brand-slate mb-1">Primary Content Challenge</label>
+          <textarea rows="3" placeholder="Tell us about your team and what you're looking to achieve..." class="w-full px-4 py-2.5 text-sm border border-border-strong rounded focus:border-brand-slate focus:ring-1 focus:ring-brand-slate outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary-luminous w-full py-3.5 text-center justify-center font-bold">
+          Submit Capability Inquiry
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="w-full bg-surface-warm border-t border-border-hairline">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-12 py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-14 border-b border-border-hairline">
+        
+        <div class="md:col-span-6 space-y-4">
+          <div class="flex items-center gap-2.5 font-headline font-extrabold text-xl tracking-[0.06em] text-brand-slate uppercase">
+            <span>STORY FUNNEL</span>
+            <span class="w-2 h-2 rounded-full bg-terracotta inline-block"></span>
+          </div>
+          <p class="font-headline font-bold text-base text-terracotta">
+            Storytelling. Social Media. Growth & Sales.
+          </p>
+          <p class="text-sm text-text-muted max-w-lg leading-relaxed">
+            Story Funnel helps organisations train their internal teams to turn their expertise into strategic content that attracts attention, builds trust and drives growth and sales.
+          </p>
+        </div>
+
+        <div class="md:col-span-6 flex flex-col sm:flex-row justify-end gap-12 sm:gap-16">
+          <div class="space-y-4">
+            <div class="font-body text-xs font-bold uppercase tracking-wider text-terracotta">Navigation</div>
+            <ul class="space-y-2.5 text-sm text-text-secondary font-medium">
+              <li><a class="hover:text-brand-slate transition-colors" href="#the-problem">The Problem</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#the-funnel">The Story Funnel</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#capabilities">Capabilities</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#the-model">The Model</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#system">System</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#clients">Clients</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#about">About</a></li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <div class="font-body text-xs font-bold uppercase tracking-wider text-terracotta">Governance</div>
+            <ul class="space-y-2.5 text-sm text-text-secondary font-medium">
+              <li><a class="hover:text-brand-slate transition-colors" href="#">Privacy Framework</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#">Terms of Engagement</a></li>
+              <li><a class="hover:text-brand-slate transition-colors" href="#">Advisory Charter</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-muted">
+        <p>© 2025 Story Funnel Advisory Group. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-brand-slate transition-colors" href="#">Privacy Framework</a>
+          <a class="hover:text-brand-slate transition-colors" href="#">Terms of Engagement</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
