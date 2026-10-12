@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---- Current-section highlight in nav --------------------------------
-  const navLinks = [...document.querySelectorAll('.main-nav a')];
+  const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
   const targets = navLinks.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
   if ('IntersectionObserver' in window && targets.length) {
     const nio = new IntersectionObserver((entries) => {
@@ -152,16 +152,49 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('form-submit');
   let opener = null;
 
-  document.querySelectorAll('.open-audit').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      opener = btn;
-      setMenu(false);
-      status.textContent = '';
-      status.className = 'form-status';
-      if (typeof dialog.showModal === 'function') dialog.showModal();
-      else dialog.setAttribute('open', '');
-    });
-  });
+  const modes = {
+    audit: {
+      title: 'Audit our social media',
+      intro: 'Click to have Story Funnel audit your social media platforms: LinkedIn, Instagram and YouTube, and we’ll tell you why your followers are not converting to sales.',
+      subject: 'New social media audit request — Story Funnel',
+      type: 'Social media audit',
+      button: 'Request my audit',
+      links: true,
+    },
+    masterclass: {
+      title: 'Book a masterclass',
+      intro: 'Tell us about your team and we’ll be in touch to plan your one-day masterclass.',
+      subject: 'New masterclass booking request — Story Funnel',
+      type: 'One-day masterclass',
+      button: 'Request my masterclass',
+      links: false,
+    },
+  };
+  let mode = modes.audit;
+  const linksField = document.getElementById('links-field');
+  const setMode = (key) => {
+    mode = modes[key];
+    document.getElementById('audit-title').textContent = mode.title;
+    dialog.querySelector('.dialog-intro').textContent = mode.intro;
+    document.getElementById('f-subject').value = mode.subject;
+    document.getElementById('f-type').value = mode.type;
+    submitBtn.textContent = mode.button;
+    if (linksField) {
+      linksField.hidden = !mode.links;
+      linksField.querySelector('textarea').required = mode.links;
+    }
+  };
+  const openDialog = (btn, key) => {
+    opener = btn;
+    setMenu(false);
+    setMode(key);
+    status.textContent = '';
+    status.className = 'form-status';
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open', '');
+  };
+  document.querySelectorAll('.open-audit').forEach((btn) => btn.addEventListener('click', () => openDialog(btn, 'audit')));
+  document.querySelectorAll('.open-masterclass').forEach((btn) => btn.addEventListener('click', () => openDialog(btn, 'masterclass')));
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => opener?.focus());
@@ -196,13 +229,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       if (!res.ok) throw new Error('Request failed');
       form.reset();
-      setStatus('Thank you. Your audit request has been received and we will be in touch shortly.', 'success');
+      setStatus('Thank you. Your request has been received and we will be in touch shortly.', 'success');
       setTimeout(() => { if (dialog.open) dialog.close(); }, 3500);
     } catch (err) {
       setStatus('Sorry, something went wrong sending your request. Please try again in a moment.', 'error');
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Request my audit';
+      submitBtn.textContent = mode.button;
     }
   });
   form.addEventListener('input', (e) => e.target.removeAttribute?.('aria-invalid'));
