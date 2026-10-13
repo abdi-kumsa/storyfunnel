@@ -76,13 +76,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .eyebrow.muted { color: var(--muted); }
 .lead { font-size: clamp(1.1rem, 1.6vw, 1.35rem); color: var(--muted); max-width: 40ch; }
 .body-lg { font-size: clamp(1.05rem, 1.4vw, 1.2rem); color: var(--muted); }
-.narrow { max-width: 56ch; margin-top: 20px; }
-.callout {
-  margin: 28px 0 36px;
-  padding-left: 20px;
-  border-left: 2px solid var(--terra);
-  font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; line-height: 1.45;
-}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -188,8 +181,9 @@ main { padding-top: 76px; }
 .tick-arrow { font-size: 28px; color: var(--terra-dark); }
 @keyframes ticker { to { transform: translateX(-50%); } }
 .result {
-  margin-top: clamp(32px, 5vw, 56px); max-width: 52ch;
-  font-family: var(--font-display); font-weight: 500; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.4;
+  margin-top: clamp(40px, 6vw, 72px); max-width: 36ch;
+  font-family: var(--font-display); font-weight: 300; text-transform: uppercase; letter-spacing: 0.01em;
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem); line-height: 1.2; text-wrap: balance; color: var(--ink);
 }
 
 /* Shift */
@@ -209,7 +203,6 @@ main { padding-top: 76px; }
 .journey li::before {
   content: ""; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--terra);
 }
-.journey-note { margin-top: 32px; max-width: 58ch; color: var(--muted); font-size: 1.1rem; }
 
 /* Tabs */
 .tab-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
@@ -231,12 +224,6 @@ main { padding-top: 76px; }
 .topic-list { margin-top: 28px; border-top: 1px solid var(--hairline); }
 .topic-list li { padding: 14px 0; border-bottom: 1px solid var(--hairline); font-weight: 500; }
 
-/* Compare */
-.compare { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--ink); }
-.compare-col { padding: 36px 36px 0 0; }
-.compare-ours { padding: 36px 0 0 36px; border-left: 1px solid var(--hairline); }
-.flow { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; line-height: 1.4; margin-bottom: 20px; }
-.compare-col p:last-child { color: var(--muted); }
 
 /* Work list */
 .work { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(28px, 5vw, 80px); align-items: start; }
@@ -252,13 +239,6 @@ main { padding-top: 76px; }
 .work-list p { color: var(--muted); margin-top: 4px; max-width: 46ch; }
 .work-media { position: sticky; top: 100px; }
 
-/* What you get */
-.get-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); }
-.get { padding: 32px 32px 0 0; }
-.get + .get { padding-left: 32px; border-left: 1px solid var(--hairline); }
-.get-num { font-size: 12px; font-weight: 600; letter-spacing: .12em; color: var(--terra-dark); }
-.get h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; margin: 14px 0 12px; line-height: 1.2; }
-.get p { color: var(--muted); }
 
 /* Audit band */
 .audit { position: relative; background: var(--night); color: var(--white); overflow: hidden; }
@@ -341,11 +321,6 @@ form [aria-invalid="true"] { border-color: #B42318; }
   .main-nav a { padding: 16px 0; font-size: 17px; border-bottom: 1px solid var(--hairline); }
   .nav-cta { margin-top: 20px; }
   .split, .tab-panel, .work, .faq-wrap { grid-template-columns: 1fr; }
-  .compare { grid-template-columns: 1fr; }
-  .compare-col, .compare-ours { padding: 28px 0 0; border-left: 0; }
-  .compare-ours { margin-top: 28px; border-top: 1px solid var(--hairline); }
-  .get-grid { grid-template-columns: 1fr; }
-  .get, .get + .get { padding: 28px 0; border-left: 0; border-bottom: 1px solid var(--hairline); }
   .work-media { position: static; order: -1; }
   .journey { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .media-image { aspect-ratio: 16 / 9; }
@@ -367,10 +342,6 @@ form [aria-invalid="true"] { border-color: #B42318; }
 }
 
 /* ---------- Additions: feedback round 2 ---------- */
-.text-link { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; font-family: var(--font-display); font-weight: 700; font-size: 15px; text-decoration: none; border-bottom: 1.5px solid transparent; align-self: center; }
-.text-link:hover { border-bottom-color: var(--terra); }
-.btn-light { background: transparent; color: var(--white); border-color: rgba(255, 255, 255, .8); }
-.btn-light:hover { background: var(--white); color: var(--ink); }
 [hidden] { display: none !important; }
 
 .start-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; border-top: 1px solid var(--ink); }
